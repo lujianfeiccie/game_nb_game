@@ -8,6 +8,7 @@ public:
      virtual bool init();
     ~PauseLayerScene();
     void resumeGame(CCObject *obj);
+    void aboutGame(CCObject *obj);
      // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::CCScene* scene(cocos2d::CCRenderTexture *sqr, bool isFlip);
 

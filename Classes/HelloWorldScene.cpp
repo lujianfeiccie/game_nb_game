@@ -68,6 +68,7 @@ bool HelloWorld::init()
 }
 
 HelloWorld::~HelloWorld(){
+    CCLog("~HelloWorld");
     if(_fire != NULL){
         _fire->release();
     }

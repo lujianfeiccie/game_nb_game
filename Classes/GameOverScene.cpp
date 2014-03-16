@@ -45,6 +45,7 @@ CCScene* GameOverScene::scene()
 }
 
 GameOverScene::~GameOverScene(){
+    CCLog("~~GameOverScene");
     if(_label!=NULL){
         _label->release();
     }
