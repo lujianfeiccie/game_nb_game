@@ -17,12 +17,12 @@ bool AboutScene::init()
         _me->retain();
         
         
-        _label = CCLabelTTF::create("Author :John","Artial",40);
+        _label = CCLabelTTF::create("作者:陆键霏","Artial",40);
         _label->setPosition(ccp(visibleSize.width/2,_me->getPositionY()-_me->getContentSize().height));
         this->addChild(_label);
         _label->retain();
         
-        _fontItem1 = CCMenuItemFont::create("OK",this,menu_selector(AboutScene::backToGame));
+        _fontItem1 = CCMenuItemFont::create("确定",this,menu_selector(AboutScene::backToGame));
         _fontItem1->setPosition(ccp(origin.x+visibleSize.width/2 ,_label->getPositionY()-_label->getContentSize().height));
         _fontItem1->retain();
         

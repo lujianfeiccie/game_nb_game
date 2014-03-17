@@ -11,17 +11,17 @@ bool PauseLayerScene::init(){
           CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
             // add a "close" icon to exit the progress. it's an autorelease object
    
-   CCMenuItemFont * fontItem1 = CCMenuItemFont::create("BACK",this,menu_selector(PauseLayerScene::resumeGame));
+   CCMenuItemFont * fontItem1 = CCMenuItemFont::create("返回",this,menu_selector(PauseLayerScene::resumeGame));
    fontItem1->setPosition(ccp(origin.x+visibleSize.width/2 ,
    origin.y+visibleSize.height/2+fontItem1->getContentSize().height));
 
     
-   CCMenuItemFont * fontItem2 = CCMenuItemFont::create("ABOUT",this,menu_selector(PauseLayerScene::aboutGame));
+   CCMenuItemFont * fontItem2 = CCMenuItemFont::create("关于",this,menu_selector(PauseLayerScene::aboutGame));
     fontItem2->setPosition(ccp(origin.x+visibleSize.width/2 ,
                                fontItem1->getPositionY() - fontItem2->getContentSize().height*2));
     
     
-   CCMenuItemFont * fontItem3 = CCMenuItemFont::create("EXIT",this,menu_selector(PauseLayerScene::menuCloseCallback));
+   CCMenuItemFont * fontItem3 = CCMenuItemFont::create("退出",this,menu_selector(PauseLayerScene::menuCloseCallback));
    fontItem3->setPosition(ccp(origin.x+visibleSize.width/2 ,
                                  fontItem2->getPositionY() - fontItem3->getContentSize().height*2));
 

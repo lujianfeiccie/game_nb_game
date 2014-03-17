@@ -119,7 +119,6 @@ void HelloWorld::update(float delta){
                       
                         CCScene* scene = GameOverScene::scene();
                         GameOverScene *layer = (GameOverScene*)scene->getChildByTag(100);//通过TAG来取对象
-                        layer->_label->setString("You won!");
                         layer->setEffect(1);//1:win的音效
                         CCDirector::sharedDirector()->replaceScene(scene);
                     }
@@ -211,7 +210,6 @@ void HelloWorld::myDisappear(CCNode *who){
         _monster->removeObject(who);
         CCScene* scene = GameOverScene::scene();
          GameOverScene *layer = (GameOverScene*)scene->getChildByTag(100);
-         layer->_label->setString("You failed!");
         layer->setEffect(2);//1:lose的音效
          CCDirector::sharedDirector()->replaceScene(scene);
       }

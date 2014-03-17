@@ -11,9 +11,9 @@ bool GameOverScene::init()
         CCSize size = CCDirector::sharedDirector()->getVisibleSize();
         _label->setPosition(ccp(size.width/2,size.height/2));
         this->addChild(_label);
-        _label->retain(); //��ͬ���������� 
+        _label->retain(); //œ‡Õ¨µƒ…˙√¸÷‹∆⁄ 
 
-        CCDelayTime *delaytime = CCDelayTime::create(4);//ͣ��ʱ��
+        CCDelayTime *delaytime = CCDelayTime::create(4);//Õ£¡Ù ±º‰
         CCCallFuncN *func = CCCallFuncN::create(this,callfuncN_selector(GameOverScene::backToGame));
         this->runAction(CCSequence::create(delaytime,func,NULL));
         return true;
@@ -28,11 +28,17 @@ void GameOverScene::setEffect(int effect)
 {
     switch(effect){
     case 1:
-       SimpleAudioEngine::sharedEngine()->playEffect("win.wav");
+        {
+        _label->setString("你赢了，高富帅!");
+        SimpleAudioEngine::sharedEngine()->playEffect("win.wav");
+        }
        break;
     case 2:
-       SimpleAudioEngine::sharedEngine()->playEffect("lose.wav");
-       break;
+        {
+        _label->setString("你输了，你个屌丝!");
+        SimpleAudioEngine::sharedEngine()->playEffect("lose.wav");
+        }
+        break;
     }
 }
 CCScene* GameOverScene::scene()
